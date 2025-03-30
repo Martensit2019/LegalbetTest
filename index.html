@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="card">
+        <div class="card-head">
+          <div class="card-head__inner">
+            <div class="avatar">
+              <img src="./images/avatar.jpg" alt="">
+            </div>
+            <div class="card-head__content">
+              <div class="card-head__content-left">
+                <div class="card-head__content-left--name">Владимир Вуйтек</div>
+                <div class="card-head__content-left--text">
+                  Статистика за последние 30 дней
+                </div>
+                <div class="card-head__content-left--stat">
+                  <span class="green">647</span><span class="gray"> / </span><span class="gray">29</span><span
+                    class="gray"> / </span><span class="red">413</span> <span class="gray"> / </span>ROI 23,9%
+                </div>
+
+              </div>
+              <div class="card-head__content-right">
+                <div class="card-head__content-right--items">
+                  <div class="card-head__content-right--item green">
+                    <div class="card-head__content-right--symbol">+</div>
+                    <div class="card-head__content-right--separator"></div>
+                    <div>647</div>
+                  </div>
+                  <div class="card-head__content-right--item gray">
+                    <div class="card-head__content-right--symbol">=</div>
+                    <div class="card-head__content-right--separator"></div>
+                    <div>29</div>
+                  </div>
+                  <div class="card-head__content-right--item red">
+                    <div class="card-head__content-right--symbol">--</div>
+                    <div class="card-head__content-right--separator"></div>
+                    <div>413</div>
+                  </div>
+                  <div class="card-head__content-right--item">
+                    <div class="card-head__content-right--symbol">ROI, %</div>
+                    <div class="card-head__content-right--separator"></div>
+                    <div class="green">23.9%</div>
+                  </div>
+                  <div class="card-head__content-right--item">
+                    <div class="card-head__content-right--symbol">Прибыль</div>
+                    <div class="card-head__content-right--separator"></div>
+                    <div class="green">+22 820</div>
+                  </div>
+                </div>
+                <div class="card-head__content-right mob">
+                  <div class="gray">30 дней</div>
+                  <div class="green">+22 820</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-body__text">
+            В Кубке страны команда Унаи Эмери бессовестно размялась на «Виктории» из Ла-Коруньи (8:0). При этом
+            серьёзные соперники: «Севилья», «Барселона» (даже кризисная) и «МЮ» (ещё более кризисный) — били
+            «Вильярреал». ЛЧ не турнир для Эмери. Он гроссмейстер убогой ЛЕ.
+            Поэтому у «Аталанты» есть шансы. Ей необходимо играть лишь на победу. Только выигрыш выводит её в плей-офф
+            ЛЧ. А поражение в комплекте с победой «Янг Бойз» над «МЮ» оставляет бергамасков без еврокубковой весны.
+            Гасперини вполне по силам одолеть команду Эмери. «Аталанта» уже обыгрывала недавно «Юве» и «Наполи».
+            Поставлю на победу итальянского клуба.
+          </p>
+          <input class="expand" type="checkbox">
+        </div>
+        <div class="card-footer">
+          <div class="card-footer__content">
+            <div class="card-footer__content-left">
+              <div>
+                <div class="card-footer__content-left--top">
+                  Прогноз
+                </div>
+                <div class="card-footer__content-left--bottom">
+                  Штрафное время: тотал меньше 16,5
+                </div>
+              </div>
+              <div class="card-footer__content-right">
+                <div class="card-footer__content-right--icon">
+                  <img src="./images/1Хstavka.svg" alt="">
+                </div>
+                <div class="card-footer__content-right--text">
+                  <div class="card-footer__content-right--koef"></div>
+                  <div class="card-footer__content-right--rate">3.20</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer__btn">
+              <button class="btn">Сделать ставку</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </main>
+  <script>
+    const text = document.querySelector('.card-body__text')
+    const scrollHeightText = text.scrollHeight
+    const maxHeightText = window.getComputedStyle(text).getPropertyValue('max-height')
+    const expand = document.querySelector('.expand')
+    expand.addEventListener('change', () => {
+      text.style.maxHeight = expand.checked ? `${scrollHeightText}px` : maxHeightText
+    })
+  </script>
+</body>
+
+</html>
